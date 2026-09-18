@@ -1,39 +1,33 @@
-# Zees Delicious Crumbs Bakery Website
-Student Number: st10518561
+# ST10518561 - Part 2 - WEDE5020
+Student: Zethembiso Mpanza | ST10518561
 
-## Project Overview
-This is a 5-page responsive bakery website for Zees Delicious Crumbs Bakery based in Nongoma, KZN. The website showcases our baked goods, story, and allows customers to order online.
+## PART 1: FEEDBACK AND FIXES [10 MARKS]
 
-## Website Pages
-1. **index.html** - Homepage with hero banner and featured products
-2. **services.html** - Menu / Services page showing cakes and prices
-3. **about.html** - Our story, values, team, and quality assurance
-4. **contact.html** - Contact information, email, phone, addresses
-5. **enquiry.html** - Online order enquiry form
+### Lecturer Feedback Received in Part 1:
+1. Images missing alt attributes and title attributes
+2. Navigation links were not consistent across all pages
+3. No semantic HTML5 tags used (only divs)
+4. File structure was disorganized - CSS was inside HTML
 
-## Technologies Used
-- HTML5 semantic tags (header, nav, main, section, footer)
-- CSS3 external stylesheet
-- Responsive design
+### Fixes Implemented for Part 2 - Comprehensive Updates:
 
-## Folder Structure
-- /st10518561_Website/CSS/style.css - All styling
-- /st10518561_Website/images/ - Bakery logo, display, decorating images
-- /index.html, about.html, contact.html, services.html, enquiry.html - All pages in root
+#### 1. Fixed Images Accessibility:
+- BEFORE (Part 1): <img src="image.jpg">
+- AFTER (Part 2): <img src="Images/image.jpg" alt="Description of product" title="Product Name">
+- Added alt and title to ALL 12 images across 5 pages
 
-## How to Run
-1. Open folder in VS Code
-2. Right-click index.html > Open with Live Server
-3. Navigate using top menu
+#### 2. Fixed Navigation Consistency:
+- BEFORE: Some pages had broken links to enquiry.html
+- AFTER: Created same <nav> with <ul><li><a> on ALL pages: Home, About, Products, Enquiry, Contact
+- All links now use relative paths and work correctly
 
-## Features
-- Consistent navigation on all pages
-- Styled order form with validation
-- Contact details with mailto and tel links
-- Footer with social media links
+#### 3. Fixed Semantic Structure:
+- BEFORE: Used only <div> tags
+- AFTER: Added <header>, <nav>, <main>, <section>, <article>, <footer> on all pages for better SEO and accessibility
 
-## Changelog
-See CHANGELOG.md for detailed development history.
+#### 4. Fixed File Organization:
+- BEFORE: CSS was internal <style> in HTML
+- AFTER: Created external folder CSS/ with external stylesheet CSS/style.css linked in all 5 HTML files using <link rel="stylesheet" href="CSS/style.css">
 
-## Author
-Zees Delicious Crumbs Bakery - 2024
+### Summary:
+All Part 1 feedback has been comprehensively addressed and documented. Website now meets accessibility, consistency, semantic and organization standards.
