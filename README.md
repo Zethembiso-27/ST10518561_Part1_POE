@@ -31,3 +31,8 @@ Student: Zethembiso Mpanza | ST10518561
 
 ### Summary:
 All Part 1 feedback has been comprehensively addressed and documented. Website now meets accessibility, consistency, semantic and organization standards.
+
+## References [5 Marks]
+- W3Schools. 2023. CSS Flexbox. [Online]. Available at: https://www.w3schools.com/css/css3_flexbox.asp [Accessed 20 September 2025]
+- MDN Web Docs. 2023. CSS Grid Layout. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout [Accessed 20 September 2025]
+- W3Schools. 2023. CSS Media Queries - Responsive Web Design. [Online]. Available at: https://www.w3schools.com/css/css3_mediaqueries.asp [Accessed 20 September 2025]
