@@ -1,205 +1,341 @@
-/* ST10518561 - Zethembiso - Part 2 - WEDE5020 - 18 Sept */
-/*Changelog: Implemented all Part 2 requirements */
+/*
+Zees Delicious Crumbs Bakery - Master External Stylesheet
+Student Name: Zethembiso | Student ID: ST10518561
+Module: WEDE5020 / MISY Past 3 POE
+*/
+
+/* 1. Global Reset & Custom Variables */
+:root {
+    --primary-color: #4A2E1B;      /* Warm Chocolate Brown */
+    --secondary-color: #E07A5F;    /* Coral Accent */
+    --accent-gold: #D4AF37;        /*Bakery Gold */
+    --bg-cream: #FFFDF9;           /*Soft Cream */
+    --card-bg: #FFFFFF;
+    --text-dark: #2B2B2B;
+    --text-muted: #666666;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+    --transition-speed: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    margin: 10px;
-    padding: 10px;
-    font-family: Arial, sans-serif;
-    background-color: aqua;
-    color: black;
-    font-size: 20px;
-
-}
-h1 { font-family: monospace;
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    color: white;
-    text-decoration: dashed;
-    text-transform: uppercase;
-    border: 5px solid lightseagreen;
-    text-shadow: 2px 2px 4px black;
-}
-h2 {
-    font-family: monospace;
-    text-align: left;
-    font-size: 30px;
-    font-weight: bold;
-    color: lightskyblue;
-}
-h3 {
-    font-family: monospace;
-    text-align: left;
-    font-size: 26px;
-    font-weight: bold;
-    color: white;
-    padding: 10px;
-}
-h4 {
-    font-family: monospace;
-    text-align: left;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
+    font-family: var(--font-body);
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h5 
-
-{
-    font-family: monospace;
-    text-align: left;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-
+/* 2. Header & Navigation */
+header {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-h6 {
-    font-family: monospace;
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-
+.logo-container h1 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--accent-gold);
 }
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
 nav a {
-
-    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
     text-decoration: none;
-    padding: 10px;
-    color: black;
-
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
+
+/*Pseudo-Classes: hover, active, focus */
 nav a:hover {
-    font-size: 10px;
-    background-color: lightblue;
-    color: white;
-    border-radius: 5px;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
 }
 
 nav a:active {
-    font-size: 10px;
-    background-color: lightblue;
-    color: white;
+    background-color: var(--accent-gold);
+    color: var(--primary-color);
+}
+
+nav a:focus {
+    outline: 3px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* 3. Main Layout & Container */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* 4. Interactive Components (Gallery, Cards, Search) */
+.search-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.search-input, .filter-select {
+    padding: 0.8rem 1rem;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    font-size: 1rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.procuct-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.8rem;
+}
+
+.product-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+/* Accorditions */
+.accordition-item {
+    background: #FFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.accordition-header {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: #F8F9FA;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordition-header:hover {
+    background: #EFEFEF;
+}
+
+.accordition-body {
+    padding: 1.5rem;
+    display: none;
+}
+
+.accordition-body.active {
+    display: block;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-modal img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 8px;
+}
+
+/* 5. Forms (enquiry.html & contact.html) */
+form {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+fieldset {
+    border: 1px solid #DDD;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"]
+input[type="email"]
+input[type="tel"]
+input[type="number"]
+input[type="date"]
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #CCC;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
-
-/* ================================== */
-/* ADDED FOR 10 MARKS - PART 2       */
-/* ================================== */
-
-/* 1. Reset for marks */
-* { 
-    box-sizing: border-box; 
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(224, 122, 95, 0.4);
 }
 
-html { 
-    font-size: 16px; 
+.error-message {
+    color: #D9534F;
+    font-size: 0.8rem;
+    display: none;
+    margin-top: 0.3rem;
 }
 
-/* 2. Typography - add missing */
-h1, h2, h3, h4, h5, h6 { 
-    line-height: 1.2; 
-    letter-spacing: 0.05em; 
+.btn-submit {
+    background-color: var(--primary-color);
+    color: #FFF;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
 }
 
-body, p { 
-    line-height: 1.6; 
-    letter-spacing: 0.02em; 
+.btn-submit:hover {
+    background-color: var(--secondary-color);
 }
 
-/* 3. Layout - Flexbox */
-header { 
-    display: flex; 
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
+.response-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    display: none;
 }
 
-/* 4. Layout - Grid */
-.main-container { 
-    display: grid; 
-    grid-template-columns: 2fr 1fr; 
-    grid-template-areas: "hero hero" "content sidebar"; 
-    gap: 2rem; 
+.response-box.success {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
 }
 
-.products { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1rem; 
-    width: 100%; 
+/* Map Container */
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* 5. Decoration */
-nav, header { 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-    border-radius: 8px; 
+/* 6. Footer */
+footer {
+    background-color: var(--primary-color);
+    color: #FFF;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
 }
 
-/* 6. Pseudo-classes - you were missing focus */
-nav a:focus { 
-    outline: 2px solid white; 
-    outline-offset: 2px; 
-    background-color: lightblue; 
-    color: white; 
+footer a {
+    color: var(--accent-gold);
 }
 
-/* 7. Images responsive */
-img { 
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
+/* 7. Responsive Media Queries (Mobile & Tablet) */
+@media screen and (max-width: 1024px) {
+    main { width: 95%; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* 8. Media Queries - 10 MARKS */
-@media screen and (max-width: 1024px) { 
-    body { 
-        margin: 50px; 
-    } 
-
-    .products { 
-        grid-template-columns: repeat(2, 1fr); 
-    } 
-
-    h1 { 
-        font-size: 2rem; 
-    } 
+@media screen and (max-width: 768) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .product-grid { grid-template-columns: 1fr; }
 }
 
-@media screen and (max-width: 768px) { 
-    body { 
-        margin: 20px; 
-    } 
-
-    header { 
-        flex-direction: column; 
-        align-items: flex-start; 
-    } 
-
-    nav { 
-        width: 100%; 
-    } 
-
-    .products { 
-        grid-template-columns: 1fr; 
-    } 
-
-    h1 { 
-        font-size: 1.8rem; 
-    } 
-}
-
-@media screen and (max-width: 480px) { 
-    html { 
-        font-size: 14px; 
-    } 
-
-    body { 
-        margin: 10px; 
-    } 
-
-    h1 { 
-        font-size: 1.6rem; 
-    } 
+@media screen and (max-width: 480px) {
+    body { font-size: 14px; }
+    h1 {font-size: 1.5rem; }
+    h2 {font-size: 1.4rem; }
+    form {padding: 1rem;
+    }
 }

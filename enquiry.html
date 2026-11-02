@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Online - Zees Delicious Crumbs Bakery</title>  
-    <link rel="stylesheet" href="st10518561_Website/CSS/style.css">
+    <title>Order Online - Zees Delicious Crumbs Bakery</title> 
+    <meta name="description" content="Submit custom cake enquiries and order online with instant price estimation."> 
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
     <!-- HEADER SECTION -->
     <header>
-        <img src="../images/bakery logo.png" alt="Zees Delicious Crumbs Bakery Logo" width="150">
+        <div class="logo-container">
+        <img src="images/bakery logo.png" alt="Zees Delicious Crumbs Bakery Logo" width="150">
         <h1>Place a custom order online</h1>
+        </div>
 
         <!-- NAVIGATION MENU -->
         <nav>
@@ -31,27 +34,47 @@
         <section>
             <h2>Place Your Order</h2>
             <p>To place your order online, please fill out the form below with your details and order information. We will get back to you as soon as possible to confirm your order.</p>
-
-            <!-- Order form -->
-            <form action="" method="post">
-
-            <!-- Personal Details Fieldset -->
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br
-
-                <label for="phone">Phone Number:</label><br>
-                <input type="tel" id="phone" name="phone" required><br><br
-            
-            <!-- Order Deatails Fielset -->
-                <label for="order_details">Order Details:</label><br>
-                <textarea id="order_details" name="order_details" rows="4" required></textarea><br><br
-
-                <input type="submit" value="Submit Order">
-            </form>
         </section>
+
+        <form id="enquiry-form">
+        <fieldset>
+            <legend>Personal & Contact Details</legend>
+            <div class="form-group">
+                <label for="enquiry-name">Full Nmae *</label>
+                <input type="text" id="enquiry-name" required minlength="2">
+            </div>
+            <div class="form-group">
+                <label for="enquiry-email"> Email Address *</label>
+                <input type="email" id="enquiry-email" required>
+                <span id="email-error" class="error-message">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group">
+                <label for="enquiry-phone">Phone Number *</label>
+                <input type="tel" id="enquiry-phone" required pattern="[0-9] {10}">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Order Details & Instant Estimator</legend>
+            <div class="form-group">
+                <label for="item-type">Select Bakery Product *</label>
+                <select id="item-type" required>
+                    <option value="" data-price="0">-- Select Product --</option>
+                    <option value="birthday-cake" data-price="450">Custom Birthday Cake (R450)</option>
+                    <option value="wedding-cake" data-price="1200">Wedding Cake (R1200)</option>
+                    <option value="pastry-box" data-price="150">Assorted Pastry Box (R150)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity *</label>
+                <input type="number" id="quantity" min="1" value="1" required>
+            </div>
+            <p id="cost-estimate" style="font-size:1.2rem; font-weight:bold; color:#4A2E1B;">Estimated Total: R0.00</p>
+        </fieldset>
+        
+        <button type="submit" class="btn-submit">Submit Enquiry</button>
+        <div id="enquiry-response" class="response-box"></div>
+    </form>
     </main>
 
 <!-- FOOTER SECTION -->
@@ -60,8 +83,10 @@
         <p>Location: Nongoma, KwaZulu Natal, South Africa</p >
         <p>Whatsapp: 0722943322 / Email: order2Zeesdeliciouscrumbs</p >
         <p>Follow us on social media: 
-            <a href="https://www.facebook.com/ZeesDeliciousCrumbsBakery">Facebook</a> | 
-            <a href="https://www.instagram.com/ZeesDeliciousCrumbsBakery">Instagram</a >
+            <a href="https://www.facebook.com/ZeesDeliciousCrumbsBakery" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+            <a href="https://www.instagram.com/ZeesDeliciousCrumbsBakery" target="_blank" rel="noopener noreferrer">Instagram</a >
     </footer>
+
+    <script src="JS/script.js"></script>
 </body>
 </html>

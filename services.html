@@ -4,15 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Zees Delicious Crumbs Bakery</title>
-    <link rel="stylesheet" href="st10518561_Website/CSS/style.css">
+    <title>Services & Menu | Zees Delicious Crumbs Bakery</title>
+    <meta name="description" content="Explore our menu of custom cakes, pastries, and bread. Filter products by category or search live.">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
 
     <!-- HEADER SECTIOON -->
     <header>
-        <img src="st10518561_Website/images/bakery logo.png" alt="Zees Delicious Crumbs Bakery Logo" width="150">
+        <div class="logo-container">
+        <img src="images/bakery logo.png" alt="Zees Delicious Crumbs Bakery Logo" width="150">
         <h1>Our Products & Services</h1>
+        </div>
 
     <!-- NAVIGATION MENU -->
         <nav>
@@ -43,7 +46,7 @@
 <!-- Specialty Cakes Section -->
         <section>
             <h2>Specialty Cakes</h2>
-            <img src="st10518561_Website/images/bento cake.png" alt="Specialty Cakes" width="100%">
+            <img src="images/bento cake.png" alt="Specialty Cakes" width="100%">
             <ul>
                 <li><b>Bento Cakes</b> - Stylish cakes for special occasions</li>
                 <li><b>Letter Cakes</b> - Personalized cakes with custom messages</li>
@@ -58,23 +61,43 @@
             <p>We also offer seasonal baked goods that are perfect for holidays and special occasions. Be sure to check our menu regularly for new and exciting offerings.</p>
         </section>
 
-<!-- Delivery Services Section -->
+        <!-- Delivery Services Section -->
         <section>
             <h2>Delivery Services</h2>
             <p>We provide convenient delivery services to ensure you get your favorite baked goods right to your doorstep. Contact us for more information about our delivery options.</p>
         </section>
+        
+        <!-- Live Search & Filter Controls -->
+         <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Search bakery menu...">
+            <select id="category-filter" class="filter-select">
+                <option value="all">All Categories</option>
+                <option value="cakes">Cakes</option>
+                <option value="pastries">Pastries</option>
+                <option value="bread">Bread</option>
+            </select>
+         </div>
 
+        <!-- Dynamic Container populated by JavaScript -->
+          <div id="dynamic-products" class="product-grid"></div>
+
+       <!-- Lightbox Modal -->
+        <div id="lightbox-modal" class="lightbox-modal">
+            <img id="lightbox-img" src="" alt="Enlarged Bakery View">
+        </div>     
     </main>
 
 <!-- FOOTER SECTION -->
     <footer >
-        <p>&copy; 2024 Zees Delicious Crumbs Bakery. All rights reserved.</p >
+        <p>&copy; 2024 Zees Delicious Crumbs Bakery| Student ID: ST10518561 | All rights reserved.</p >
         <p>Location: Nongoma, KwaZulu Natal, South Africa</p >
         <p>Whatsapp: 0722943322 / Email: order2Zeesdeliciouscrumbs</p >
         <p>Follow us on social media: 
-            <a href="https://www.facebook.com/ZeesDeliciousCrumbsBakery">Facebook</a> | 
-            <a href="https://www.instagram.com/ZeesDeliciousCrumbsBakery">Instagram</a >
+            <a href="https://www.facebook.com/ZeesDeliciousCrumbsBakery" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+            <a href="https://www.instagram.com/ZeesDeliciousCrumbsBakery" target="_blank" rel="noopener noreferrer">Instagram</a >
         </p >
     </footer >
+
+    <script src="JS/script.js"></script>
 </body >
 </html >

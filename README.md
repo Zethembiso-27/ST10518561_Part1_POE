@@ -1,38 +1,23 @@
-# ST10518561 - Part 2 - WEDE5020
-Student: Zethembiso Mpanza | ST10518561
+# Zees Delicious Crumbs Bakery - Website POE
+**Student Name:** Zethembiso
+**Student ID:** ST10518561
+**Module:** WEDE5020 / MISY6211 Part 3
 
-## PART 1: FEEDBACK AND FIXES [10 MARKS]
+## Project Overview
+An interactive, responsive, and SEO-optimized website built for Zees Delicious Crumbs Bakery. The site features dynamic product filtering, Leaflet interactive maps, custom JavaScript form validation, and responsive mobile styling.
 
-### Lecturer Feedback Received in Part 1:
-1. Images missing alt attributes and title attributes
-2. Navigation links were not consistent across all pages
-3. No semantic HTML5 tags used (only divs)
-4. File structure was disorganized - CSS was inside HTML
+## Key Features
+- **Dynamic Content & Search**: Filter products by category or query in real-time.
+- **Interactive Map**: View physical bakery locations in Nongoma and Durban using Leaflet.js.
+- **On-Page & Technical SEO**: Structured header hierarchy, unique meta tags, `robots.txt`, and `sitemap.xml`.
+- **Form Validation**: Client-side validation with instant order price calculation.
 
-### Fixes Implemented for Part 2 - Comprehensive Updates:
+---
+## References (IIE Harvard-Anglia 2025 Style)
+- Leaflet, 2026. *Leaflet - an open-source JavaScript library for mobile-friendly interactive maps*. [online] Available at: <https://leafletjs.com/> [Accessed 30 October 2026].
+- OpenStreetMap, 2026. *OpenStreetMap Data*. [online] Available at: <https://www.openstreetmap.org/> [Accessed 30 October 2026].
+- The Independent Institute of Education (IIE), 2025. *Harvard - Anglia Style Reference Guide - Adapted for The IIE 2025*. Sandton: The Independent Institute of Education.
+- W3Schools, 2026. *JavaScript Form Validation*. [online] Available at: <https://www.w3schools.com/js/js_validation.asp> [Accessed 30 October 2026].
 
-#### 1. Fixed Images Accessibility:
-- BEFORE (Part 1): <img src="image.jpg">
-- AFTER (Part 2): <img src="Images/image.jpg" alt="Description of product" title="Product Name">
-- Added alt and title to ALL 12 images across 5 pages
-
-#### 2. Fixed Navigation Consistency:
-- BEFORE: Some pages had broken links to enquiry.html
-- AFTER: Created same <nav> with <ul><li><a> on ALL pages: Home, About, Products, Enquiry, Contact
-- All links now use relative paths and work correctly
-
-#### 3. Fixed Semantic Structure:
-- BEFORE: Used only <div> tags
-- AFTER: Added <header>, <nav>, <main>, <section>, <article>, <footer> on all pages for better SEO and accessibility
-
-#### 4. Fixed File Organization:
-- BEFORE: CSS was internal <style> in HTML
-- AFTER: Created external folder CSS/ with external stylesheet CSS/style.css linked in all 5 HTML files using <link rel="stylesheet" href="CSS/style.css">
-
-### Summary:
-All Part 1 feedback has been comprehensively addressed and documented. Website now meets accessibility, consistency, semantic and organization standards.
-
-## References [5 Marks]
-- W3Schools. 2023. CSS Flexbox. [Online]. Available at: https://www.w3schools.com/css/css3_flexbox.asp [Accessed 20 September 2025]
-- MDN Web Docs. 2023. CSS Grid Layout. [Online]. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout [Accessed 20 September 2025]
-- W3Schools. 2023. CSS Media Queries - Responsive Web Design. [Online]. Available at: https://www.w3schools.com/css/css3_mediaqueries.asp [Accessed 20 September 2025]
+## How to Run
+Open `index.html` with VS Code Live Server.

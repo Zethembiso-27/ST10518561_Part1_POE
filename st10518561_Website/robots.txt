@@ -1,0 +1,4 @@
+# robots.txt for Zees Delicious Crumbs Bakery
+User-agent: *
+Allow: /
+Sitemap: https://www.zeesdeliciouscrumbsbakery.co.za/sitemap.xml
